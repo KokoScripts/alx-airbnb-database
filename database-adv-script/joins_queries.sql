@@ -17,6 +17,7 @@ ON
 
 This only returns bookings that have a valid user_id in the users table (i.e., users who actually made a booking).
 
+
 🔹 2. LEFT JOIN: Get all properties and their reviews (even those without reviews)
 sql
 Copy
@@ -62,11 +63,10 @@ Bookings that are not linked to any user (maybe due to data errors)
 
 Note: Not all databases support FULL OUTER JOIN (e.g., MySQL doesn’t). You can simulate it using UNION of LEFT JOIN and RIGHT JOIN:
 
-sql
-Copy
-Edit
--- For MySQL or systems without FULL OUTER JOIN
-SELECT 
+  
+Edit For MySQL or systems without FULL OUTER JOIN
+
+  SELECT 
   users.id AS user_id,
   users.name,
   bookings.id AS booking_id,
