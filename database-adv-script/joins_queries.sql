@@ -22,6 +22,7 @@ This only returns bookings that have a valid user_id in the users table (i.e., u
 sql
 Copy
 Edit
+  
 SELECT 
   properties.id AS property_id,
   properties.title,
@@ -32,7 +33,10 @@ FROM
 LEFT JOIN 
   reviews 
 ON 
-  properties.id = reviews.property_id;
+  properties.id = reviews.property_id
+ORDER BY 
+  properties.id;
+
 
 This shows all properties. If a property has no review, the rating and comment will be NULL.
 
