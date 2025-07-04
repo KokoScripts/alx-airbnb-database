@@ -1,6 +1,6 @@
 # SQL Joins Practice – Airbnb Clone Backend
 
-## 📘 Objective
+## Objective
 This project is designed to help you **master SQL joins** by writing practical queries using different types of JOINs: `INNER JOIN`, `LEFT JOIN`, and `FULL OUTER JOIN`.
 
 The queries are based on an **Airbnb-style database schema** with the following tables:
@@ -68,18 +68,20 @@ FROM
   bookings
 LEFT JOIN users 
   ON bookings.user_id = users.id;
+```
+---
+# SQL Subqueries Practice – Airbnb Clone
 
-
-# 📊 SQL Subqueries Practice – Airbnb Clone
-
-## 🎯 Objective
+## Objective
 This mini-project focuses on using **subqueries** and **correlated subqueries** to extract meaningful insights from an Airbnb-style database. You'll practice writing powerful SQL queries that go beyond simple joins.
 
 ---
 
-## 🧠 Queries Overview
+## Queries Overview
 
-### 1. 🔍 Properties with Average Rating > 4.0
+### 1.
+
+Properties with Average Rating > 4.0
 ```sql
 SELECT 
   properties.id,
