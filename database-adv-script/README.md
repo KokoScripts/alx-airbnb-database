@@ -96,4 +96,28 @@ GROUP BY
   properties.id, properties.title
 HAVING 
   AVG(reviews.rating) > 4.0;
+```
+# SQL Aggregation & Window Functions – Airbnb Clone
 
+## Objective
+The goal of this task is to analyze Airbnb-style data using **SQL aggregation** and **window functions**. These tools help summarize and rank data without losing access to individual rows.
+
+---
+
+## Queries Overview
+
+### 1. 🔢 Total Number of Bookings per User
+```sql
+SELECT 
+  users.id AS user_id,
+  users.name,
+  COUNT(bookings.id) AS total_bookings
+FROM 
+  users
+LEFT JOIN 
+  bookings 
+ON 
+  users.id = bookings.user_id
+GROUP BY 
+  users.id, users.name;
+```
