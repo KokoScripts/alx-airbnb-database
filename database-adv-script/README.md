@@ -68,3 +68,30 @@ FROM
   bookings
 LEFT JOIN users 
   ON bookings.user_id = users.id;
+
+
+# 📊 SQL Subqueries Practice – Airbnb Clone
+
+## 🎯 Objective
+This mini-project focuses on using **subqueries** and **correlated subqueries** to extract meaningful insights from an Airbnb-style database. You'll practice writing powerful SQL queries that go beyond simple joins.
+
+---
+
+## 🧠 Queries Overview
+
+### 1. 🔍 Properties with Average Rating > 4.0
+```sql
+SELECT 
+  properties.id,
+  properties.title
+FROM 
+  properties
+JOIN 
+  reviews 
+ON 
+  properties.id = reviews.property_id
+GROUP BY 
+  properties.id, properties.title
+HAVING 
+  AVG(reviews.rating) > 4.0;
+
